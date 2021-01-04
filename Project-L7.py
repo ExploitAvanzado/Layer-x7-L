@@ -17,34 +17,6 @@ year = now.year
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
 #############                                     
-#Login
-contador = 1
-while contador <= 3:
-    usuario = input("[-] User [-]  :")
-    contraseña = input("[-] Password [-]  :")
-    if usuario == "Eternal Demon" and contraseña == "Eternal Demon":
-        contador = 4
-        print('''
-                
-        
-                    ┌─ ─┐  ╦  ╔═╗╔═╗╔═╗╦╔╗╔  ┌─ ─┐
-                    │───│  ║  ║ ║║ ╦║ ╦║║║║  │───│
-                    └─ ─┘  ╩═╝╚═╝╚═╝╚═╝╩╝╚╝  └─ ─┘
-''')
-    else:
-        print('''
-        
-                    ┌─ ─┐  ╦═╗╔═╗╔╦╗╦═╗╦ ╦       ┌─ ─┐
-                    │───│  ╠╦╝║╣  ║ ╠╦╝╚╦╝       │───│
-                    └─ ─┘  ╩╚═╚═╝ ╩ ╩╚═ ╩   ooo  └─ ─┘
-
-        ''')
-        time.sleep(5)
-        os.system('clear')
-        if contador == 3:
-            contador = contador +1
-time.sleep(5)
-os.system('clear')
 print('''
 
    ▄███████▄    ▄████████    ▄████████    ▄███████▄    ▄████████    ▄████████    ▄████████ ███▄▄▄▄   ████████▄   ▄██████▄          ▄████████  ▄█               ▄████████     ███        ▄████████ ████████▄   ███    █▄     ▄████████      
