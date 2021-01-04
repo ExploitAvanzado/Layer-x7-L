@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
-#!/usr/bin/python
+#!/usr/bin/python3
 import sys
 import os
 import time
 import socket
 import random
+import requests
+import socks
+import threading
+import ssl
+import datetime
 #Code Time
 from datetime import datetime
 now = datetime.now()
