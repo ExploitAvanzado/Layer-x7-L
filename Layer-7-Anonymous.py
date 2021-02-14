@@ -261,7 +261,6 @@ def OutputToScreen(ind_rlock):
 		if i > 3:
 			i = 0
 		print("{:^70}".format('''                                                                                                                                                                    
-# -*- coding: utf-8 -*-
                                                                                     
                               *@@@&(,        .,#@@@@*                              
                         .&@#                          .%@@.                        
